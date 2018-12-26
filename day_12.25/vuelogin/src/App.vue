@@ -16,5 +16,6 @@ export default {
 
 <style>
 @import url("./common/css/common.css");
+@import url("./common/fonts/iconfont.css");
 @import url("./common/css/style.css");
 </style>

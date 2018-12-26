@@ -159,3 +159,163 @@
   display: inline-block;
   border-bottom: 1px solid #BCBBBC;
 }
+
+#app .indexPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#app .indexPage .header {
+  width: 100%;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+#app .indexPage .footer {
+  width: 100%;
+  height: 50px;
+  background: #E8F0F3;
+  display: flex;
+}
+
+#app .indexPage .footer a {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#app .indexPage .main {
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+}
+
+#app .indexPage .main .found {
+  width: 100%;
+  height: 100%;
+}
+
+#app .indexPage .main .found .foundSwiper {
+  width: 100%;
+  height: 150px;
+  background: #333;
+  position: relative;
+}
+
+#app .indexPage .main .found .foundSwiper .tab {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#app .indexPage .main .found .foundSwiper .tab span {
+  padding: 0 20px;
+}
+
+#app .indexPage .main .found .foundSwiper .banner {
+  position: absolute;
+  width: 100%;
+  padding: 0 10px;
+  left: 0;
+  top: 46px;
+  box-sizing: border-box;
+}
+
+#app .indexPage .main .found .foundSwiper .banner img {
+  border-radius: 5px;
+}
+
+#app .indexPage .main .found .nav {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+#app .indexPage .main .found .nav a {
+  flex: 1;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
+
+#app .indexPage .main .found .nav a .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #333;
+  font-size: 24px;
+  color: #999;
+  text-align: center;
+  line-height: 50px;
+}
+
+#app .indexPage .main .found .nav a span {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#app .indexPage .main .found .recommend {
+  width: 100%;
+}
+
+#app .indexPage .main .found .recommend .recommendTitle {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+#app .indexPage .main .found .recommend .recommendTitle span {
+  font-family: "楷体";
+  margin-left: 10px;
+  font-weight: 800;
+}
+
+#app .indexPage .main .found .recommend .recommendList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#app .indexPage .main .found .recommend .recommendList li {
+  width: 33.33%;
+  padding: 5px;
+}
+
+#app .indexPage .main .found .recommend .recommendList li dl {
+  width: 100%;
+}
+
+#app .indexPage .main .found .recommend .recommendList li dl dt img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#app .indexPage .main .found .recommend .recommendList li dl dd {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
