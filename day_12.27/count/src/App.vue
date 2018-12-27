@@ -15,10 +15,18 @@ export default {
   methods: {
     changeNum(type) {
       //this.$store.commit("changeNum", { payload: type });
-      this.$store.commit({
-        type: "changeNum",
+      /* this.$store.commit({
+        type: "app/changeNum",
         payload: type
-      });
+      }); */
+      this.$store
+        .dispatch({
+          type: "app/changeNumAsync",
+          payload: type
+        })
+        .then(res => {
+          console.log("异步操作完成！");
+        });
     }
   }
 };
