@@ -20,7 +20,7 @@ export default {
     return {
       swiperops: {
         autoplay: {
-          delay: 1500
+          delay: 2500
         },
         loop: true,
         pagination: {

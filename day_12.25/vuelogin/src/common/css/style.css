@@ -190,6 +190,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #777;
+}
+
+#app .indexPage .footer a.router-link-active {
+  color: #333;
 }
 
 #app .indexPage .main {
@@ -205,7 +210,7 @@
 
 #app .indexPage .main .found .foundSwiper {
   width: 100%;
-  height: 150px;
+  height: 170px;
   background: #333;
   position: relative;
 }
@@ -216,11 +221,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5px 0;
+}
+
+#app .indexPage .main .found .foundSwiper .tab a {
+  color: #999;
+  padding: 0 20px;
+  position: relative;
+  height: 100%;
+  line-height: 36px;
+}
+
+#app .indexPage .main .found .foundSwiper .tab a.router-link-active {
   color: #fff;
 }
 
-#app .indexPage .main .found .foundSwiper .tab span {
-  padding: 0 20px;
+#app .indexPage .main .found .foundSwiper .tab a.router-link-active::after {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-radius: 1px;
+  transform: translateX(-50%);
 }
 
 #app .indexPage .main .found .foundSwiper .banner {
@@ -272,11 +297,16 @@
   text-align: center;
 }
 
-#app .indexPage .main .found .recommend {
+#app .indexPage .main .found .recommendPage {
+  width: 100%;
+  height: 100%;
+}
+
+#app .indexPage .main .found .recommendPage .recommendCont {
   width: 100%;
 }
 
-#app .indexPage .main .found .recommend .recommendTitle {
+#app .indexPage .main .found .recommendPage .recommendCont .recommendTitle {
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -284,33 +314,33 @@
   font-size: 20px;
 }
 
-#app .indexPage .main .found .recommend .recommendTitle span {
+#app .indexPage .main .found .recommendPage .recommendCont .recommendTitle span {
   font-family: "楷体";
   margin-left: 10px;
   font-weight: 800;
 }
 
-#app .indexPage .main .found .recommend .recommendList {
+#app .indexPage .main .found .recommendPage .recommendCont .recommendList {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-#app .indexPage .main .found .recommend .recommendList li {
+#app .indexPage .main .found .recommendPage .recommendCont .recommendList li {
   width: 33.33%;
   padding: 5px;
 }
 
-#app .indexPage .main .found .recommend .recommendList li dl {
+#app .indexPage .main .found .recommendPage .recommendCont .recommendList li dl {
   width: 100%;
 }
 
-#app .indexPage .main .found .recommend .recommendList li dl dt img {
+#app .indexPage .main .found .recommendPage .recommendCont .recommendList li dl dt img {
   width: 100%;
   border-radius: 5px;
 }
 
-#app .indexPage .main .found .recommend .recommendList li dl dd {
+#app .indexPage .main .found .recommendPage .recommendCont .recommendList li dl dd {
   width: 100%;
   display: -webkit-box;
   -webkit-box-orient: vertical;

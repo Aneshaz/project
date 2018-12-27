@@ -148,6 +148,10 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                color: #777;
+                &.router-link-active {
+                    color: #333;
+                }
             }
         }
         .main {
@@ -159,7 +163,7 @@
                 height: 100%;
                 .foundSwiper {
                     width: 100%;
-                    height: 150px;
+                    height: 170px;
                     background: #333;
                     position: relative;
                     .tab {
@@ -168,9 +172,27 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        color: #fff;
-                        span {
+                        padding: 5px 0;
+                        a {
+                            color: #999;
                             padding: 0 20px;
+                            position: relative;
+                            height: 100%;
+                            line-height: 36px;
+                            &.router-link-active {
+                                color: #fff;
+                                &::after {
+                                    content: '';
+                                    width: 32px;
+                                    height: 2px;
+                                    background: #fff;
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    border-radius: 1px;
+                                    transform: translateX(-50%);
+                                }
+                            }
                         }
                     }
                     .banner {
@@ -217,43 +239,47 @@
                         }
                     }
                 }
-                .recommend {
+                .recommendPage {
                     width: 100%;
-                    .recommendTitle {
+                    height: 100%;
+                    .recommendCont {
                         width: 100%;
-                        height: 50px;
-                        line-height: 50px;
-                        padding: 0 10px;
-                        font-size: 20px;
-                        span {
-                            font-family: "楷体";
-                            margin-left: 10px;
-                            font-weight: 800;
+                        .recommendTitle {
+                            width: 100%;
+                            height: 50px;
+                            line-height: 50px;
+                            padding: 0 10px;
+                            font-size: 20px;
+                            span {
+                                font-family: "楷体";
+                                margin-left: 10px;
+                                font-weight: 800;
+                            }
                         }
-                    }
-                    .recommendList {
-                        width: 100%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        li {
-                            width: 33.33%;
-                            padding: 5px;
-                            dl {
-                                width: 100%;
-                                dt {
-                                    img {
-                                        width: 100%;
-                                        border-radius: 5px;
-                                    }
-                                }
-                                dd {
+                        .recommendList {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            li {
+                                width: 33.33%;
+                                padding: 5px;
+                                dl {
                                     width: 100%;
-                                    display: -webkit-box;
-                                    -webkit-box-orient: vertical;
-                                    word-break: break-all;
-                                    -webkit-line-clamp: 2;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
+                                    dt {
+                                        img {
+                                            width: 100%;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                    dd {
+                                        width: 100%;
+                                        display: -webkit-box;
+                                        -webkit-box-orient: vertical;
+                                        word-break: break-all;
+                                        -webkit-line-clamp: 2;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
                                 }
                             }
                         }

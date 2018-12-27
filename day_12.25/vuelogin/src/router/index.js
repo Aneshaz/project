@@ -5,6 +5,8 @@ import LoginPage from "../components/loginPage";
 import RegistryPage from "../components/registry";
 import Index from "../components/indexPage";
 import Found from "../components/indexSub/found";
+import Recommend from "../components/indexSub/recommend";
+import Station from "../components/indexSub/station";
 import Movie from "../components/indexSub/movie";
 import Mine from "../components/indexSub/mine";
 import Friend from "../components/indexSub/friend";
@@ -16,7 +18,7 @@ Vue.use(Router)
 export default new Router({
     routes: [{
         path: '/',
-        redirect: '/index'
+        redirect: '/index/found/recommend'
     }, {
         path: '/toLogin',
         name: 'Login',
@@ -35,7 +37,14 @@ export default new Router({
         component: Index,
         children: [{
             path: 'found',
-            component: Found
+            component: Found,
+            children: [{
+                path: 'recommend',
+                component: Recommend
+            }, {
+                path: 'station',
+                component: Station
+            }]
         }, {
             path: 'movie',
             component: Movie
