@@ -18,7 +18,7 @@ Vue.use(Router)
 export default new Router({
     routes: [{
         path: '/',
-        redirect: '/index/found/recommend'
+        redirect: '/index/found'
     }, {
         path: '/toLogin',
         name: 'Login',
@@ -39,6 +39,9 @@ export default new Router({
             path: 'found',
             component: Found,
             children: [{
+                path: '',
+                redirect: 'recommend'
+            }, {
                 path: 'recommend',
                 component: Recommend
             }, {

@@ -206,25 +206,23 @@
 #app .indexPage .main .found {
   width: 100%;
   height: 100%;
-}
-
-#app .indexPage .main .found .foundSwiper {
-  width: 100%;
-  height: 170px;
-  background: #333;
   position: relative;
 }
 
-#app .indexPage .main .found .foundSwiper .tab {
+#app .indexPage .main .found .tab {
   width: 100%;
   height: 46px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
 }
 
-#app .indexPage .main .found .foundSwiper .tab a {
+#app .indexPage .main .found .tab a {
   color: #999;
   padding: 0 20px;
   position: relative;
@@ -232,11 +230,11 @@
   line-height: 36px;
 }
 
-#app .indexPage .main .found .foundSwiper .tab a.router-link-active {
+#app .indexPage .main .found .tab a.router-link-active {
   color: #fff;
 }
 
-#app .indexPage .main .found .foundSwiper .tab a.router-link-active::after {
+#app .indexPage .main .found .tab a.router-link-active::after {
   content: '';
   width: 32px;
   height: 2px;
@@ -246,6 +244,13 @@
   bottom: 0;
   border-radius: 1px;
   transform: translateX(-50%);
+}
+
+#app .indexPage .main .found .foundSwiper {
+  width: 100%;
+  height: 170px;
+  background: #333;
+  position: relative;
 }
 
 #app .indexPage .main .found .foundSwiper .banner {

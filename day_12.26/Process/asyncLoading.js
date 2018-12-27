@@ -1,38 +1,19 @@
 let imgData = [{
-        "title": "科比",
-        "img": "http://img5.imgtn.bdimg.com/it/u=1034509453,3780254810&fm=26&gp=0.jpg"
-    },
-    {
-        "title": "科比",
-        "img": "http://img2.imgtn.bdimg.com/it/u=748498709,4262997883&fm=26&gp=0.jpg"
-    },
-    {
-        "title": "科比",
-        "img": "http://img0.imgtn.bdimg.com/it/u=519375851,3712964833&fm=26&gp=0.jpg"
-    }, {
-        "title": "科比",
-        "img": "http://img0.imgtn.bdimg.com/it/u=2927006080,4133669820&fm=26&gp=0.jpg"
-    },
-    {
-        "title": "科比",
-        "img": "http://img2.imgtn.bdimg.com/it/u=1826053323,2657304213&fm=26&gp=0.jpg"
-    },
-    {
-        "title": "科比",
-        "img": "http://img4.imgtn.bdimg.com/it/u=2835727096,370852494&fm=26&gp=0.jpg"
-    }, {
-        "title": "科比",
-        "img": "http://img1.imgtn.bdimg.com/it/u=2036438682,2597269289&fm=26&gp=0.jpg"
-    },
-    {
-        "title": "科比",
-        "img": "http://img3.imgtn.bdimg.com/it/u=2183114584,2344672575&fm=26&gp=0.jpg"
-    },
-    {
-        "title": "科比",
-        "img": "http://img0.imgtn.bdimg.com/it/u=2318116030,435769550&fm=26&gp=0.jpg"
-    }
-]
+    id: 1,
+    img: 'https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/02/01/ChMkJ1bKxPiIG76qAAs612-GgjcAALHPACxZksACzrv497.jpg'
+}, {
+    id: 2,
+    img: 'https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/02/01/ChMkJlbKxPmIJgn1AAtNhH6bB1UAALHPAC8oToAC02c000.jpg'
+}, {
+    id: 3,
+    img: 'https://desk-fd.zol-img.com.cn/t_s1280x800c5/g5/M00/02/01/ChMkJlbKxQyIJgarAAJaIRsKR2wAALHQAI3eDMAAlo5575.jpg'
+}, {
+    id: 4,
+    img: 'https://desk-fd.zol-img.com.cn/t_s208x208c5/g5/M00/04/09/ChMkJ1oM6NKIIUP-AAcPx6M4Es8AAiNBQK9xwcABw_f602.jpg'
+}, {
+    id: 5,
+    img: 'https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/02/01/ChMkJ1bKxPmIPsobAAtBGSxTZ00AALHPADeFZwAC0Ex487.jpg'
+}]
 let loadImg = (src) => {
     return new Promise((resolve, reject) => {
         let image = new Image();

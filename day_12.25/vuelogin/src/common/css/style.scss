@@ -161,40 +161,45 @@
             .found {
                 width: 100%;
                 height: 100%;
+                position: relative;
+                .tab {
+                    width: 100%;
+                    height: 46px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 99;
+                    a {
+                        color: #999;
+                        padding: 0 20px;
+                        position: relative;
+                        height: 100%;
+                        line-height: 36px;
+                        &.router-link-active {
+                            color: #fff;
+                            &::after {
+                                content: '';
+                                width: 32px;
+                                height: 2px;
+                                background: #fff;
+                                position: absolute;
+                                left: 50%;
+                                bottom: 0;
+                                border-radius: 1px;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
                 .foundSwiper {
                     width: 100%;
                     height: 170px;
                     background: #333;
                     position: relative;
-                    .tab {
-                        width: 100%;
-                        height: 46px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 5px 0;
-                        a {
-                            color: #999;
-                            padding: 0 20px;
-                            position: relative;
-                            height: 100%;
-                            line-height: 36px;
-                            &.router-link-active {
-                                color: #fff;
-                                &::after {
-                                    content: '';
-                                    width: 32px;
-                                    height: 2px;
-                                    background: #fff;
-                                    position: absolute;
-                                    left: 50%;
-                                    bottom: 0;
-                                    border-radius: 1px;
-                                    transform: translateX(-50%);
-                                }
-                            }
-                        }
-                    }
                     .banner {
                         position: absolute;
                         width: 100%;

@@ -1,10 +1,6 @@
 <template>
   <div class="stationPage">
     <div class="foundSwiper">
-      <div class="tab">
-        <router-link to="/index/found/recommend">个性推荐</router-link>
-        <router-link to="/index/found/station">主播电台</router-link>
-      </div>
       <div class="banner">
         <swiper-parent :banner="banner"></swiper-parent>
       </div>
