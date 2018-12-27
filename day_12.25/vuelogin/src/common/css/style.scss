@@ -285,6 +285,47 @@
                         }
                     }
                 }
+                .stationPage {
+                    width: 100%;
+                    height: 100%;
+                    .stationTitle {
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 10px;
+                        font-size: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        span {
+                            font-size: 14px;
+                            color: #999;
+                        }
+                    }
+                    .stationList {
+                        width: 100%;
+                        li {
+                            width: 100%;
+                            padding: 10px;
+                            border-bottom: 1px solid #ccc;
+                            dl {
+                                width: 100%;
+                                display: flex;
+                                dt {
+                                    img {
+                                        width: 114px;
+                                        display: block;
+                                        border-radius: 5px;
+                                    }
+                                }
+                                dd {
+                                    flex: 1;
+                                    padding: 0 15px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

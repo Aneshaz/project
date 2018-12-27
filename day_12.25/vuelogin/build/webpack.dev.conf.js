@@ -33,6 +33,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
                 const data = require('../src/mock/remmendList.json');
                 res.send(data);
             })
+            app.get('/api/stationList', (req, res) => {
+                const data = require('../src/mock/stationList.json');
+                res.send(data);
+            })
         },
         hot: true,
         contentBase: false, // since we use CopyWebpackPlugin.

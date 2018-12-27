@@ -79,7 +79,6 @@ export default {
   mounted() {
     axios.get("/api/recommendList").then(res => {
       this.recommendList = res.data.list;
-      console.log(this.recommendList);
     });
   }
 };

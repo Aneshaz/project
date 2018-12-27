@@ -5,7 +5,7 @@
       <router-view></router-view>
     </main>
     <footer class="footer">
-      <router-link to="/index/found">发现</router-link>
+      <router-link to="/index/found/recommend">发现</router-link>
       <router-link to="/index/movie">视频</router-link>
       <router-link to="/index/mine">我的</router-link>
       <router-link to="/index/friend">我的</router-link>
