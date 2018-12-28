@@ -4,7 +4,7 @@ const state = {
 
 const getters = {
     date(state) {
-        return new Date().toLocaleString()
+        return new Date().toLocaleString() + '---' + state.num
     }
 }
 
