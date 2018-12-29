@@ -332,6 +332,133 @@
                     }
                 }
             }
+            .account {
+                width: 100%;
+                height: 100%;
+                .myLogin {
+                    width: 100%;
+                    .titleMsg {
+                        width: 100%;
+                        height: 140px;
+                        padding: 15px 10px;
+                        p {
+                            text-align: center;
+                            font-size: 16px;
+                            color: #555;
+                        }
+                        button {
+                            width: 100%;
+                            height: 44px;
+                            border-radius: 22px;
+                            background: none;
+                            border: 1px solid #999;
+                            color: #555;
+                            outline: none;
+                            margin: 10px 0;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .accountMsg {
+                    width: 100%;
+                    .myNews {
+                        width: 100%;
+                        border-top: 10px solid #eee;
+                        border-bottom: 10px solid #eee;
+                    }
+                    .accountShop,
+                    .accountSet,
+                    .accountShare {
+                        width: 100%;
+                        border-bottom: 10px solid #eee;
+                    }
+                }
+            }
+        }
+    }
+    .vipPage {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .vipHeader {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            border-bottom: 1px solid #eee;
+            .back {
+                widows: 50px;
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+        .vipCont {
+            width: 100%;
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            .vipCardList {
+                display: flex;
+                overflow-x: auto;
+                .vipCardTab {
+                    width: 340px;
+                    height: 220px;
+                    flex-shrink: 0;
+                    padding: 0 16px;
+                    .cardCont {
+                        width: 100%;
+                        height: 100%;
+                        padding: 14px 0;
+                        .cardMain {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background: url(https://p1.music.126.net/-BmD9VrnJ3AYGL-AUlFhDw==/109951163524411405.jpg?imageView=&interlace=1&quality=100&thumbnail=670x0) no-repeat -36px;
+                            background-size: cover;
+                            display: flex;
+                            padding: 30px 20px;
+                            flex-direction: column;
+                            .primeTitle {
+                                img {
+                                    width: 67px;
+                                }
+                            }
+                            .primeDesc {
+                                font-size: 12px;
+                                line-height: 2;
+                                color: #e5cac5;
+                            }
+                            .actionBtns {
+                                flex: 1;
+                                display: flex;
+                                align-items: flex-end;
+                                padding-bottom: 10px;
+                                button {
+                                    height: 36px;
+                                    padding: 0 20px;
+                                    border-radius: 18px;
+                                    background: #e5cac5;
+                                    outline: none;
+                                    font-weight: 800;
+                                    line-height: 36px;
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                    &.red {
+                        .cardCont {
+                            .cardMain {
+                                background: url(https://p1.music.126.net/aWQGEt66RVRrPT6rU5O3JQ==/109951163524419514.jpg?imageView=&interlace=1&quality=100&thumbnail=670x0) no-repeat -36px;
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Login from "../components/login";
 import LoginPage from "../components/loginPage";
+import Vip from "../components/vip";
 import RegistryPage from "../components/registry";
 import Index from "../components/indexPage";
 import Found from "../components/indexSub/found";
@@ -61,5 +62,8 @@ export default new Router({
             path: 'account',
             component: Account
         }]
+    }, {
+        path: '/vip',
+        component: Vip
     }]
 })
