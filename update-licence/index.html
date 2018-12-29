@@ -6,6 +6,30 @@
     <title>补换驾照</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'>
     <meta http - equiv='X-UA-Compatible' content='ie=edge,Chrome=1'>
+    <script>
+        var fun = function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    //docEl.style.fontSize = (clientWidth / 750) * 100 + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        };
+        fun(document, window);
+        // 引入移动端调试工具
+        (function() {
+            var script = document.createElement('script');
+            script.src = "//cdn.jsdelivr.net/npm/eruda";
+            document.head.appendChild(script);
+            script.onload = function() {
+                eruda.init()
+            }
+        })();
+    </script>
 </head>
 
 <body>
