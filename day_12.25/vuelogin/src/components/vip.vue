@@ -1,7 +1,7 @@
 <template>
   <div class="vipPage">
     <div class="vipHeader">
-      <div class="back">
+      <div class="back" @click="goBack">
         <i class="icon iconfont icon-chevron-thin-left"></i>
       </div>
       <div class="vipHeaderText">会员中心</div>
@@ -45,12 +45,18 @@
           </div>
         </div>
       </div>
+      <div class="vipTabCont"></div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "Vip"
+  name: "Vip",
+  methods: {
+    goBack() {
+      this.$router.back(-1);
+    }
+  }
 };
 </script>
 <style>
