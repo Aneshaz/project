@@ -1,29 +1,19 @@
 <template>
-  <div id="app">
-    <h2>补换驾照</h2>
-    <button @click="login">点击登录</button>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
 const JSBridge = require("./utils/JSBridge.js");
 
 export default {
-  name: "app",
-  data() {
-    return {};
-  },
+  name: "update-licence",
+
   methods: {
-    login() {
-      JSBridge.invoke("app", "login", {
-        loginCallBackName: res => {
-          console.log("res...", res);
-        }
-      });
-    }
+    upload(e) {}
   }
 };
 </script>
 
-<style lang="scss">
+<style>
+@import url("./scss/common.css");
 </style>
