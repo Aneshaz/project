@@ -8,9 +8,7 @@ const JSBridge = require("./utils/JSBridge.js");
 export default {
   name: "update-licence",
 
-  methods: {
-    upload(e) {}
-  }
+  methods: {}
 };
 </script>
 

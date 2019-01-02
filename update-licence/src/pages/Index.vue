@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="banner">
-      <!-- <img src="./assets/banner.jpg" alt> -->
+      <!-- <img src="banner.jpg" alt> -->
     </div>
     <Upload/>
     <div class="service-list">
