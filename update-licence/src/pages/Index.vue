@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="banner">
-      <!-- <img src="banner.jpg" alt> -->
+      <img src="http://picture.eclicks.cn/g2/img/r/2018/11/07/62e0398785c38983.jpg" alt>
     </div>
     <Upload/>
     <div class="service-list">
@@ -24,28 +24,7 @@
           <strong class="type-icon">&gt;</strong>
         </div>
       </div>
-      <div class="service-item service-issue-city">
-        <div class="city-text">
-          <span>当前驾照签发城市</span>
-          <p class="city-help">
-            <span>?</span>
-          </p>
-        </div>
-        <div class="city-change" @click="selectIssue">
-          <div class="city-change-text">请选择签发地</div>
-        </div>
-      </div>
-      <div class="service-item service-update-city">
-        <div class="city-text">
-          <span>可补换的签发城市</span>
-          <p class="city-help">
-            <span>?</span>
-          </p>
-        </div>
-        <div class="city-change">
-          <div class="city-change-text">请选择补换地</div>
-        </div>
-      </div>
+      <CityPicker/>
       <div class="service-item service-charge">
         <div class="charge-text">
           <span>服务费</span>
@@ -76,7 +55,7 @@
         <button>立即支付</button>
       </div>
     </div>
-    <section id="type-model" v-show="showType">
+    <section id="type-model" v-model="showType">
       <van-popup v-model="showType" overlay position="bottom">
         <van-picker
           :columns="typeArray"
@@ -91,10 +70,12 @@
 </template>
 <script>
 import Upload from "@/components/Upload";
+import CityPicker from "@/components/CityPicker";
 
 export default {
   components: {
-    Upload
+    Upload,
+    CityPicker
   },
   data() {
     return {
@@ -127,11 +108,6 @@ export default {
   methods: {
     changeType() {
       this.showType = true;
-    },
-    selectIssue() {
-      fetch("/api/ExchangeJiaZhao/cityList").then(res => {
-        console.log(res);
-      });
     },
     onTypeCancel() {
       this.showType = false;
