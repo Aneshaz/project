@@ -3,9 +3,7 @@
     <div class="service-item service-issue-city">
       <div class="city-text">
         <span>当前驾照签发城市</span>
-        <p class="city-help">
-          <span>?</span>
-        </p>
+        <CityHelp/>
       </div>
       <div class="city-change" @click="selectIssue">
         <div class="city-change-text">{{city.length?city.join(' '):'请选择签发地'}}</div>
@@ -14,9 +12,7 @@
     <div class="service-item service-update-city">
       <div class="city-text">
         <span>可补换的签发城市</span>
-        <p class="city-help">
-          <span>?</span>
-        </p>
+        <CityHelp/>
       </div>
       <div class="city-change" @click="selectUpdate">
         <div class="city-change-text">{{cost.length?cost.join(' '):'请选择补换地'}}</div>
@@ -52,9 +48,13 @@
 </template>
 <script>
 import { mapState, mapMutations, mapActions } from "vuex";
+import CityHelp from "./CityHelp";
 
 export default {
   name: "CityPicker",
+  components: {
+    CityHelp
+  },
   data() {
     return {
       showCity: false,
