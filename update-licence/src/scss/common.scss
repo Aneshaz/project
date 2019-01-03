@@ -170,6 +170,10 @@ body,
     }
 }
 
+#type-model {
+    width: 100%;
+}
+
 .service-list {
     width: 100%;
     background: #fff;
@@ -186,6 +190,12 @@ body,
         padding-right: 10px;
         &.service-type {
             .type-change {
+                width: 80px;
+                display: flex;
+                span {
+                    flex: 1;
+                    text-align: center;
+                }
                 .type-icon {
                     font-family: "楷体";
                     color: #999;

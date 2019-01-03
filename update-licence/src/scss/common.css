@@ -190,6 +190,10 @@ body,
   margin: 10px 0;
 }
 
+#type-model {
+  width: 100%;
+}
+
 .service-list {
   width: 100%;
   background: #fff;
@@ -206,6 +210,16 @@ body,
   border-bottom: 1px solid #ccc;
   color: #555;
   padding-right: 10px;
+}
+
+.service-list .service-item.service-type .type-change {
+  width: 80px;
+  display: flex;
+}
+
+.service-list .service-item.service-type .type-change span {
+  flex: 1;
+  text-align: center;
 }
 
 .service-list .service-item.service-type .type-change .type-icon {

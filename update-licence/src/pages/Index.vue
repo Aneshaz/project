@@ -19,8 +19,8 @@
         <div class="type-text">
           <span>服务类型</span>
         </div>
-        <div class="type-change">
-          <span>换驾照</span>
+        <div class="type-change" @click="changeType">
+          <span>{{form.type}}</span>
           <strong class="type-icon">&gt;</strong>
         </div>
       </div>
@@ -31,7 +31,7 @@
             <span>?</span>
           </p>
         </div>
-        <div class="city-change">
+        <div class="city-change" @click="selectIssue">
           <div class="city-change-text">请选择签发地</div>
         </div>
       </div>
@@ -76,6 +76,17 @@
         <button>立即支付</button>
       </div>
     </div>
+    <section id="type-model" v-show="showType">
+      <van-popup v-model="showType" overlay position="bottom">
+        <van-picker
+          :columns="typeArray"
+          show-toolbar
+          title="服务类型"
+          @cancel="onTypeCancel"
+          @confirm="onTypeConfirm"
+        />
+      </van-popup>
+    </section>
   </div>
 </template>
 <script>
@@ -106,29 +117,29 @@ export default {
           text: "办理完成"
         }
       ],
-      uploadText: [
-        {
-          uploadId: 1,
-          text: "身份证正面"
-        },
-        {
-          uploadId: 2,
-          text: "身份证反面"
-        },
-        {
-          uploadId: 3,
-          text: "驾驶证正页"
-        },
-        {
-          uploadId: 4,
-          text: "驾驶证副页"
-        },
-        {
-          uploadId: 5,
-          text: "白底半身照"
-        }
-      ]
+      form: {
+        type: "换驾照"
+      },
+      showType: false,
+      typeArray: ["换驾照", "补驾照"]
     };
+  },
+  methods: {
+    changeType() {
+      this.showType = true;
+    },
+    selectIssue() {
+      fetch("/api/ExchangeJiaZhao/cityList").then(res => {
+        console.log(res);
+      });
+    },
+    onTypeCancel() {
+      this.showType = false;
+    },
+    onTypeConfirm(value) {
+      this.form.type = value;
+      this.onTypeCancel();
+    }
   }
 };
 </script>
