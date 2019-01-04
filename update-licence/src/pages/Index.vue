@@ -22,7 +22,7 @@
           <span>服务费</span>
         </div>
         <div class="charge-price">
-          <span>￥399</span>
+          <span>￥{{money?money:'399.00'}}</span>
         </div>
       </div>
     </div>
@@ -50,6 +50,8 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
+
 import Upload from "@/components/Upload";
 import CityPicker from "@/components/CityPicker";
 import TypePicker from "@/components/TypePicker";
@@ -82,6 +84,11 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    ...mapState({
+      money: state => state.cityPicker.money
+    })
   },
   methods: {}
 };

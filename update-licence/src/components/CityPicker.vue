@@ -80,7 +80,8 @@ export default {
       cityList: state => state.cityPicker.cityList,
       city: state => state.cityPicker.city,
       costList: state => state.cityPicker.costList,
-      cost: state => state.cityPicker.cost
+      cost: state => state.cityPicker.cost,
+      costSelectInd: state => state.cityPicker.costSelectInd
     })
   },
   methods: {
@@ -105,7 +106,9 @@ export default {
               values: this.costList.map(item => item.name)
             },
             {
-              values: this.costList[0].list.map(item => item.name)
+              values: this.costList[this.costSelectInd].list.map(
+                item => item.name
+              )
             }
           ];
         });
@@ -127,6 +130,11 @@ export default {
     },
     costChange(picker, values) {
       let index = this.costList.findIndex(item => item.name == values[0]);
+      this.updateState({ costSelectInd: index });
+      /* this.updateState({
+        money: this.costList[index].list.map(item => item.cost)
+      });
+      console.log(this.money); */
       this.$refs.costPicker.setColumnValues(
         1,
         this.costList[index].list.map(item => item.name)
@@ -136,6 +144,16 @@ export default {
       this.showCost = false;
     },
     costConfirm(values) {
+      console.log(values);
+      values.forEach(item => {
+        if (item.indexOf("(签发地)") !== -1) {
+          item = item.replace("(签发地)", "");
+        }
+      });
+      console.log(values);
+      this.updateState({
+        money: this.costList[this.costSelectInd].list.map(item => item.cost)[0]
+      });
       this.updateState({ cost: values });
       this.costCancel();
     }

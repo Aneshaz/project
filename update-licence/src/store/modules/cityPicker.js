@@ -5,7 +5,8 @@ const state = {
     costList: [],
     city: [],
     cost: [],
-    money: ''
+    money: '',
+    costSelectInd: 0
 }
 
 const mutations = {
@@ -38,7 +39,9 @@ const actions = {
                 })
             }
         })
+        console.log(res.data)
         commit('updateState', { costList: res.data })
+            // commit('updateState', { money: res.data })
     }
 }
 
