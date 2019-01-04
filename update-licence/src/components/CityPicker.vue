@@ -140,11 +140,9 @@ export default {
       this.showCost = false;
     },
     costConfirm(values) {
-      console.log(values);
       let newValues = values.map(item => {
         if (item.indexOf("(签发地)") !== -1) {
           item = item.replace("(签发地)", "");
-          console.log(item);
         }
         return item;
       });

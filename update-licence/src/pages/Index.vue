@@ -44,13 +44,14 @@
         <span class="pay-price">￥399</span>
       </div>
       <div class="pay-btn">
-        <button>立即支付</button>
+        <button @click="toPay">立即支付</button>
       </div>
     </div>
   </div>
 </template>
 <script>
 import { mapState } from "vuex";
+import { goPay } from "@/api/index";
 
 import Upload from "@/components/Upload";
 import CityPicker from "@/components/CityPicker";
@@ -90,7 +91,11 @@ export default {
       money: state => state.cityPicker.money
     })
   },
-  methods: {}
+  methods: {
+    toPay() {
+      goPay();
+    }
+  }
 };
 </script>
 <style>

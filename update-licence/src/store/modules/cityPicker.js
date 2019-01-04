@@ -41,7 +41,6 @@ const actions = {
         })
         console.log(res.data)
         commit('updateState', { costList: res.data })
-            // commit('updateState', { money: res.data })
     }
 }
 

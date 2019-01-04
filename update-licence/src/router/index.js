@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import { getToken } from "@/utils/index";
+import { goLogin } from "@/api/index";
 
 Vue.use(VueRouter);
 
@@ -14,6 +16,18 @@ const router = new VueRouter({
         path: '*',
         redirect: '/index'
     }]
+})
+
+router.beforeEach((to, from, next) => {
+    if (getToken()) {
+        next();
+    } else {
+        goLogin();
+    }
+})
+
+router.afterEach((to, from) => {
+
 })
 
 export default router;
