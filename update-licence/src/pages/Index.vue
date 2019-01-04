@@ -36,7 +36,7 @@
       </div>
     </div>
     <p class="FAQ">
-      <a href="#">常见问题?</a>
+      <router-link to="/FAQ">常见问题?</router-link>
     </p>
     <div class="footer-pay">
       <div class="pay-text">

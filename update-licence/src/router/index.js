@@ -5,8 +5,8 @@ import { goLogin } from "@/api/index";
 
 Vue.use(VueRouter);
 
-// 引入路由组件
 import IndexPage from '@/pages/Index';
+import FAQ from "@/pages/FAQ";
 
 const router = new VueRouter({
     routes: [{
@@ -15,6 +15,9 @@ const router = new VueRouter({
     }, {
         path: '*',
         redirect: '/index'
+    }, {
+        path: '/FAQ',
+        component: FAQ
     }]
 })
 
