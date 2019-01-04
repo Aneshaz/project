@@ -1,5 +1,5 @@
 <template>
-  <div class="service-city">
+  <div class="city-service">
     <div class="service-item service-issue-city">
       <div class="city-text">
         <span>当前驾照签发城市</span>

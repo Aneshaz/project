@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <button @click="changeNum('sub')">-</button>
+    <button @click="changeNumSync({payload:'sub'})">-</button>
     <span>{{num}}</span>
     <span>{{date}}</span>
-    <button @click="changeNum('add')">+</button>
+    <button @click="changeNumSync({payload:'add'})">+</button>
   </div>
 </template>
 

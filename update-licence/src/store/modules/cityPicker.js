@@ -4,7 +4,8 @@ const state = {
     cityList: [],
     costList: [],
     city: [],
-    cost: []
+    cost: [],
+    money: ''
 }
 
 const mutations = {
@@ -27,6 +28,16 @@ const actions = {
         let proIndex = state.cityList.findIndex(item => item.name == state.city[0]),
             cityIndex = state.cityList[proIndex].list.findIndex(item => item.name == state.city[1]);
         let res = await costList(1, state.cityList[proIndex].id, state.cityList[proIndex].list[cityIndex].id);
+        res.data.forEach(item => {
+            if (item.source_city == 1) {
+                item.name += '(签发地)'
+                item.list.forEach(itm => {
+                    if (itm.source_city == 1) {
+                        itm.name += '(签发地)'
+                    }
+                })
+            }
+        })
         commit('updateState', { costList: res.data })
     }
 }
