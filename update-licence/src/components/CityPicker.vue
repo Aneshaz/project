@@ -131,10 +131,6 @@ export default {
     costChange(picker, values) {
       let index = this.costList.findIndex(item => item.name == values[0]);
       this.updateState({ costSelectInd: index });
-      /* this.updateState({
-        money: this.costList[index].list.map(item => item.cost)
-      });
-      console.log(this.money); */
       this.$refs.costPicker.setColumnValues(
         1,
         this.costList[index].list.map(item => item.name)
@@ -145,16 +141,17 @@ export default {
     },
     costConfirm(values) {
       console.log(values);
-      values.forEach(item => {
+      let newValues = values.map(item => {
         if (item.indexOf("(签发地)") !== -1) {
           item = item.replace("(签发地)", "");
+          console.log(item);
         }
+        return item;
       });
-      console.log(values);
       this.updateState({
         money: this.costList[this.costSelectInd].list.map(item => item.cost)[0]
       });
-      this.updateState({ cost: values });
+      this.updateState({ cost: newValues });
       this.costCancel();
     }
   }
