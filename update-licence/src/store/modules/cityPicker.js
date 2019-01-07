@@ -3,10 +3,13 @@ import { cityList, costList } from "@/api/index";
 const state = {
     cityList: [],
     costList: [],
+    addressList: [],
     city: [],
     cost: [],
+    address: [],
     money: '',
-    costSelectInd: 0
+    costSelectInd: 0,
+    addressSelectInd: 0
 }
 
 const mutations = {
@@ -24,6 +27,11 @@ const actions = {
             })
         })
         commit('updateState', { cityList: res.data })
+    },
+    async getAddressList({ commit }) {
+        let res = await cityList();
+        console.log(res.data);
+        commit('updateState', { addressList: res.data })
     },
     async getCostList({ commit, state }, action) {
         let proIndex = state.cityList.findIndex(item => item.name == state.city[0]),

@@ -1,15 +1,6 @@
 <template>
   <div id="update-licence">
-    <div class="header-process">
-      <div
-        class="process-item"
-        :class="index==actInd?'active':''"
-        v-for="(item,index) in processText"
-        :key="item.processId"
-      >
-        <span>{{item.text}}</span>
-      </div>
-    </div>
+    <HeaderProcess :actInd="actInd"/>
     <div class="banner">
       <img src="http://picture.eclicks.cn/g2/img/r/2018/11/07/62e0398785c38983.jpg" alt>
     </div>
@@ -38,6 +29,7 @@
     <p class="FAQ">
       <router-link to="/FAQ">常见问题?</router-link>
     </p>
+    <Custom/>
     <div class="footer-pay">
       <div class="pay-text">
         <span>实付:</span>
@@ -53,37 +45,23 @@
 import { mapState } from "vuex";
 import { goPay } from "@/api/index";
 
+import HeaderProcess from "@/components/HeaderProcess";
 import Upload from "@/components/Upload";
 import CityPicker from "@/components/CityPicker";
 import TypePicker from "@/components/TypePicker";
+import Custom from "@/components/Custom";
 
 export default {
   components: {
     Upload,
     CityPicker,
-    TypePicker
+    TypePicker,
+    Custom,
+    HeaderProcess
   },
   data() {
     return {
-      actInd: 0,
-      processText: [
-        {
-          processId: 1,
-          text: "订单提交"
-        },
-        {
-          processId: 2,
-          text: "填写收货地址"
-        },
-        {
-          processId: 3,
-          text: "正在办理"
-        },
-        {
-          processId: 4,
-          text: "办理完成"
-        }
-      ]
+      actInd: 0
     };
   },
   computed: {
