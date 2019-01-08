@@ -3,7 +3,7 @@ import { cityList, costList } from "@/api/index";
 const state = {
     cityList: [],
     costList: [],
-    addressList: [],
+    addressList: {},
     city: [],
     cost: [],
     address: [],
@@ -30,8 +30,25 @@ const actions = {
     },
     async getAddressList({ commit }) {
         let res = await cityList();
-        console.log(res.data);
-        commit('updateState', { addressList: res.data })
+        let formatAddress = {
+            province_list: {},
+            city_list: {},
+            county_list: {}
+        };
+        res.data.forEach(item => {
+            // console.log(item);
+            formatAddress.province_list[item.id] = item.name;
+            item.list.forEach(itm => {
+                // console.log(itm);
+                formatAddress.city_list[itm.id] = itm.name;
+                itm.list.forEach(val => {
+                    // console.log(val);
+                    formatAddress.county_list[val.id] = val.name;
+                })
+            })
+        });
+        console.log(formatAddress);
+        commit('updateState', { addressList: formatAddress })
     },
     async getCostList({ commit, state }, action) {
         let proIndex = state.cityList.findIndex(item => item.name == state.city[0]),

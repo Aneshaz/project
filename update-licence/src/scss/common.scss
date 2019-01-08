@@ -315,7 +315,7 @@ body,
 .custom {
     position: fixed;
     right: 15px;
-    bottom: 50px;
+    bottom: 60px;
     width: 50px;
     z-index: 99;
     img {
@@ -333,10 +333,17 @@ body,
     font-size: 14px;
 }
 
+#address-page {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
 .harvest-address {
     width: 100%;
     padding-left: 10px;
-    .address-city {
+    background: #fff;
+    .contact-item {
         width: 100%;
         height: 50px;
         line-height: 50px;
@@ -345,13 +352,83 @@ body,
         border-bottom: 1px solid #ccc;
         color: #555;
         padding-right: 10px;
-        .city-text {
-            height: 100%;
+        &.address-city {
+            .city-text {
+                height: 100%;
+            }
+            .city-change {
+                height: 100%;
+                flex: 1;
+                text-align: right;
+            }
         }
-        .city-change {
-            height: 100%;
-            flex: 1;
-            text-align: right;
+        &.detailed-address {
+            .detailed-text {
+                height: 100%;
+            }
+            .detailed-change {
+                flex: 1;
+                height: 100%;
+                padding-left: 20px;
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    outline: none;
+                    text-align: right;
+                }
+            }
         }
+        &.contact-number {
+            .number-text {
+                height: 100%;
+            }
+            .number-change {
+                flex: 1;
+                height: 100%;
+                padding-left: 20px;
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    outline: none;
+                    text-align: right;
+                }
+            }
+        }
+        &.contact-man {
+            border: 0;
+            .man-text {
+                height: 100%;
+            }
+            .man-change {
+                flex: 1;
+                height: 100%;
+                padding-left: 20px;
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    outline: none;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.sure-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    button {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        background: #999;
+        border: 0;
+        color: #fff;
     }
 }

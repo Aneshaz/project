@@ -344,7 +344,7 @@ body,
 .custom {
   position: fixed;
   right: 15px;
-  bottom: 50px;
+  bottom: 60px;
   width: 50px;
   z-index: 99;
 }
@@ -363,12 +363,19 @@ body,
   font-size: 14px;
 }
 
+#address-page {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
 .harvest-address {
   width: 100%;
   padding-left: 10px;
+  background: #fff;
 }
 
-.harvest-address .address-city {
+.harvest-address .contact-item {
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -379,12 +386,87 @@ body,
   padding-right: 10px;
 }
 
-.harvest-address .address-city .city-text {
+.harvest-address .contact-item.address-city .city-text {
   height: 100%;
 }
 
-.harvest-address .address-city .city-change {
+.harvest-address .contact-item.address-city .city-change {
   height: 100%;
   flex: 1;
   text-align: right;
+}
+
+.harvest-address .contact-item.detailed-address .detailed-text {
+  height: 100%;
+}
+
+.harvest-address .contact-item.detailed-address .detailed-change {
+  flex: 1;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.harvest-address .contact-item.detailed-address .detailed-change input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  text-align: right;
+}
+
+.harvest-address .contact-item.contact-number .number-text {
+  height: 100%;
+}
+
+.harvest-address .contact-item.contact-number .number-change {
+  flex: 1;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.harvest-address .contact-item.contact-number .number-change input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  text-align: right;
+}
+
+.harvest-address .contact-item.contact-man {
+  border: 0;
+}
+
+.harvest-address .contact-item.contact-man .man-text {
+  height: 100%;
+}
+
+.harvest-address .contact-item.contact-man .man-change {
+  flex: 1;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.harvest-address .contact-item.contact-man .man-change input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  text-align: right;
+}
+
+.sure-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.sure-btn button {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background: #999;
+  border: 0;
+  color: #fff;
 }

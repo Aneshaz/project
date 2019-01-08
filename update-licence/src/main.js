@@ -3,10 +3,11 @@ import App from './App.vue'
 import router from "@/router/index";
 import store from "@/store/index";
 
-import { Popup, Picker } from 'vant';
+import { Popup, Picker, Area } from 'vant';
 
 Vue.use(Popup);
 Vue.use(Picker);
+Vue.use(Area);
 
 new Vue({
     el: '#app',
