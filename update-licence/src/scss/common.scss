@@ -430,6 +430,9 @@ body,
         background: #999;
         border: 0;
         color: #fff;
+        &.active {
+            background: limegreen;
+        }
     }
 }
 

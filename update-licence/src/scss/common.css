@@ -471,6 +471,10 @@ body,
   color: #fff;
 }
 
+.sure-btn button.active {
+  background: limegreen;
+}
+
 .red-packet {
   position: fixed;
   right: 15px;
