@@ -16,7 +16,7 @@
           <span>详细地址</span>
         </div>
         <div class="detailed-change">
-          <input type="text" v-model="detailedAddress" @input="addDetail">
+          <input type="text" v-model="detailedAddress" placeholder="请输入详细地址" @input="addDetail">
         </div>
       </div>
       <div class="contact-number contact-item">
@@ -64,7 +64,7 @@ import Custom from "@/components/Custom";
 import RedPacket from "@/components/RedPacket";
 
 export default {
-  name: "Address",
+  name: "AddressPage",
   data() {
     return {
       actInd: 1,
@@ -125,7 +125,7 @@ export default {
       values.forEach(item => {
         newValues.push(item.name);
       });
-      console.log(newValues);
+      // console.log(newValues);
       this.updateState({ address: newValues });
       this.messageFlag[0] = true;
       this.changeAct();

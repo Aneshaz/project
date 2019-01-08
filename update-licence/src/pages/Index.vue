@@ -71,7 +71,8 @@ export default {
   },
   methods: {
     toPay() {
-      goPay();
+      this.$router.push({ path: "/address" });
+      //goPay();
     }
   }
 };

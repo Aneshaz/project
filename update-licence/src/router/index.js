@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 
 import IndexPage from '@/pages/Index';
 import FAQ from "@/pages/FAQ";
-import Address from "@/pages/Address";
+import AddressPage from "@/pages/Address";
 
 const router = new VueRouter({
     routes: [{
@@ -15,13 +15,13 @@ const router = new VueRouter({
         component: IndexPage
     }, {
         path: '*',
-        redirect: '/address'
+        redirect: '/index'
     }, {
         path: '/FAQ',
         component: FAQ
     }, {
         path: '/address',
-        component: Address
+        component: AddressPage
     }]
 })
 
