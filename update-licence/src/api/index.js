@@ -41,6 +41,10 @@ export let goLogin = () => {
     });
 }
 
+export let goShare = () => {
+    JSBridge.invoke('ui', 'shareMessage');
+}
+
 export let goPay = () => {
     JSBridge.invoke('app', 'pay', {
         price: 398.00,
