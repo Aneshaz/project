@@ -432,3 +432,14 @@ body,
         color: #fff;
     }
 }
+
+.red-packet {
+    position: fixed;
+    right: 15px;
+    bottom: 120px;
+    width: 50px;
+    z-index: 99;
+    img {
+        width: 100%;
+    }
+}

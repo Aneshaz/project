@@ -50,6 +50,7 @@
       </section>
     </div>
     <Custom/>
+    <RedPacket/>
     <div class="sure-btn">
       <button>确认</button>
     </div>
@@ -60,6 +61,7 @@ import { mapState, mapMutations, mapActions } from "vuex";
 
 import HeaderProcess from "@/components/HeaderProcess";
 import Custom from "@/components/Custom";
+import RedPacket from "@/components/RedPacket";
 
 export default {
   name: "Address",
@@ -75,7 +77,8 @@ export default {
   },
   components: {
     HeaderProcess,
-    Custom
+    Custom,
+    RedPacket
   },
   created() {
     this.getAddressList().then(res => {
